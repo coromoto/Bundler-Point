@@ -21,8 +21,9 @@ module Point
     end
     # Tipeado pato 
     def ==(other)
-      if (other.respond_to?x && other.respond_to?y)
+      if ((other.respond_to?x) && (other.respond_to?y))
         @x == other.x && @y == other.y
+      end
       rescue
         false
     end
