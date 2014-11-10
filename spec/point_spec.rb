@@ -52,6 +52,8 @@ describe Point do
     before :each do
        @p1 = Point::Point.new(1,1)
        @p2 = Point::Point.new(2,2)
+       @p3 = Point::Point.new(1,0)
+       @p4 = Point::Point.new(0,1)
     end
     it "El punto (1,1) es menor que el punto (2,2)" do
       expect(@p1 < @p2).to eq(true)
@@ -68,5 +70,16 @@ describe Point do
     it "El punto (1,1) es igual al punto (1,1)" do
       expect(@p1 == @p1).to eq(true)
     end
+
+    it "El punto (1,0) y el punto (0,1) son distintos" do
+      expect(@p3 == @p4).to eq(false)
+    end
   end # context
+
+#   context "# haciendo el punto enumerable" do
+#     it "iterar sobre las coordenadas del punto" do
+#       p1 = Point::Point.new(1,1)
+#       expect(p1.each).to eq([1,1])
+#     end 
+#   end
 end # describe
