@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Las instrucciones de duso son simples. Se trata de un punto en dos dimensiones.
 
 ## Contributing
 
@@ -29,3 +29,5 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+[![Coverage Status](https://coveralls.io/repos/coromoto/Bundler-Point/badge.png?branch=master)](https://coveralls.io/r/coromoto/Bundler-Point?branch=master)
