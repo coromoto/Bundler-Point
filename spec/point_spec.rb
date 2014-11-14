@@ -67,6 +67,7 @@ describe Point do
     it "El punto (2,2) es mayor o igual que el punto (1,1)" do
       expect(@p2 >= @p1).to eq(true)
     end
+
     it "El punto (1,1) es igual al punto (1,1)" do
       expect(@p1 == @p1).to eq(true)
     end
@@ -74,6 +75,13 @@ describe Point do
     it "El punto (1,0) y el punto (0,1) son distintos" do
       expect(@p3 == @p4).to eq(false)
     end
+
+    it "El punto (1,1) es distinto del Rectangulo (1,1)" do
+      Rectangle = Struct.new(:x, :y)
+      r = Rectangle.new(1,1)
+      expect(@p1 == r).to eq(false)
+    end
+
   end # context
 
 #   context "# haciendo el punto enumerable" do

@@ -21,21 +21,23 @@ module Point
     end
     
     # Tipeado pato 
-    def ==(other)
-      if ((other.respond_to?x) && (other.respond_to?y)) then
-        @x == other.x && @y == other.y
-      end
-      rescue
-        false
-    end
+    # def ==(other)
+    #  if ((other.respond_to?x) && (other.respond_to?y)) then
+    #    @x == other.x && @y == other.y
+    #  end
+    #  rescue
+    #    false
+    # end
+
     # Mas restrictivo (sin herencia - usa instance_of?)
-    def ==(other)
-      if other.instance_of?Point
-         @x == other.x && @y == other.y
-      else
-        false
-      end
-    end
+    # def ==(other)
+    #  if other.instance_of?Point
+    #     @x == other.x && @y == other.y
+    #  else
+    #    false
+    #  end
+    # end
+
     # Restrictivo (con herencia - usa is_a?)
     def ==(other)
       if other.is_a?Point
