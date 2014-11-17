@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Point
   class Point
     include Comparable
