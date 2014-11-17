@@ -49,7 +49,7 @@ module Point
       end
     end
     
-    #se incluye el método del mixin Enumerable
+    #se incluye el metodo del mixin Enumerable
     def each
       yield @x
       yield @y

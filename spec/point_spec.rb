@@ -94,22 +94,22 @@ describe Point do
        @p4 = Point::Point.new(0,1)
        @pm = Point::Point.new(false,nil)
     end
-    it "comprobrando el método all? con un bloque vacío" do
+    it "comprobrando el metodo all? con un bloque vacio" do
       expect(@p1.all?).to eq(true)
       expect(@pm.all?).to eq(false)
     end 
-    it "comprobrando el método any?" do
+    it "comprobrando el metodo any?" do
       expect(@p1.any?).to eq(true)
       expect(@pm.any?).to eq(false)
     end 
-    it "comprobrando el método collect" do
+    it "comprobrando el metodo collect" do
       expect(@p2.map{|i| i*i}).to eq([4,4])
       expect(@p2.collect{|i| i*i}).to eq([4,4])
     end 
-    it "comprobrando el método count" do
+    it "comprobrando el metodo count" do
       expect(@p2.count).to eq(2)
     end
-    it "comprobrando el método detect" do
+    it "comprobrando el metodo detect" do
       expect(@p3.detect {|i| i == 0}).to eq(0)
       expect(@p3.find {|i| i == 1}).to eq(1)
     end
