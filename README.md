@@ -31,3 +31,4 @@ Las instrucciones de duso son simples. Se trata de un punto en dos dimensiones.
 5. Create a new Pull Request
 
 [![Coverage Status](https://coveralls.io/repos/coromoto/Bundler-Point/badge.png?branch=master)](https://coveralls.io/r/coromoto/Bundler-Point?branch=master)
+[![Build Status](https://travis-ci.org/coromoto/Bundler-Point.svg?branch=master)](https://travis-ci.org/coromoto/Bundler-Point)

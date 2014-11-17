@@ -54,6 +54,7 @@ describe Point do
        @p2 = Point::Point.new(2,2)
        @p3 = Point::Point.new(1,0)
        @p4 = Point::Point.new(0,1)
+       @pm = Point::Point.new(false,nil)
     end
     it "El punto (1,1) es menor que el punto (2,2)" do
       expect(@p1 < @p2).to eq(true)
@@ -84,10 +85,44 @@ describe Point do
 
   end # context
 
-#   context "# haciendo el punto enumerable" do
-#     it "iterar sobre las coordenadas del punto" do
-#       p1 = Point::Point.new(1,1)
-#       expect(p1.each).to eq([1,1])
-#     end 
-#   end
+ context "# haciendo el punto enumerable" do
+    before :each do
+       @p1 = Point::Point.new(1,1)
+       @p2 = Point::Point.new(2,2)
+       @p3 = Point::Point.new(1,0)
+       @p4 = Point::Point.new(0,1)
+       @pm = Point::Point.new(false,nil)
+    end
+    it "comprobrando el método all? con un bloque vacío" do
+      expect(@p1.all?).to eq(true)
+      expect(@pm.all?).to eq(false)
+    end 
+    it "comprobrando el método any?" do
+      expect(@p1.any?).to eq(true)
+      expect(@pm.any?).to eq(false)
+    end 
+    it "comprobrando el método collect" do
+      expect(@p2.map{|i| i*i}).to eq([4,4])
+      expect(@p2.collect{|i| i*i}).to eq([4,4])
+    end 
+    it "comprobrando el método count" do
+      expect(@p2.count).to eq(2)
+    end
+    it "comprobrando el método detect" do
+      expect(@p3.detect {|i| i == 0}).to eq(0)
+      expect(@p3.find {|i| i == 1}).to eq(1)
+    end
+    it "comprobrando drop" do
+      expect(@p4.drop(1)).to eq([1])
+    end
+    it "comprobrando max" do
+      expect(@p4.max).to eq(1)
+    end
+    it "comprobrando min" do
+      expect(@p4.min).to eq(0)
+    end
+    it "comprobrando sort" do
+      expect(@p3.sort).to eq([0,1])
+    end
+  end
 end # describe

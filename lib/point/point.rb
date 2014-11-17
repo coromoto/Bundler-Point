@@ -1,6 +1,7 @@
 module Point
   class Point
     include Comparable
+    include Enumerable
     attr_reader :x, :y
     def initialize(x,y)
       @x, @y = x, y
@@ -45,6 +46,12 @@ module Point
       else
         false
       end
+    end
+    
+    #se incluye el método del mixin Enumerable
+    def each
+      yield @x
+      yield @y
     end
   end
 end
