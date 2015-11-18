@@ -27,11 +27,12 @@ module Point
       @x, @y = x, y
     end
     
-    # Producto por un escalar
-    #=begin
+=begin
       Comprobando si esto es un comentario que
       incluye varias líneas
-    #=end
+      Pero no puede estar identado, debe estar en la columna 0
+=end
+    # Producto por un escalar
     def *(value)
       # los comentarios locales a los métodos no generan documentación
       Point.new(@x * value, @y * value)

@@ -83,7 +83,7 @@ describe Point do
       r = Rectangle.new(1,1)
       expect(@p1 == r).to eq(false)
     end
-
+    
   end # context
 
  context "# haciendo el punto enumerable" do
@@ -126,4 +126,5 @@ describe Point do
       expect(@p3.sort).to eq([0,1])
     end
   end
+  
 end # describe
